@@ -2,7 +2,6 @@ import pandas as pd
 
 df = pd.read_excel("../data/data.xlsx")
 
-
 class AgentBaseFunctions:
     def __init__(self, dataset):
         self.dataset = dataset
@@ -30,5 +29,4 @@ class AgentBaseFunctions:
     def get_value_count(self, column):
         return self.dataset[column].value_counts().to_dict()
 
-test_inst = AgentBaseFunctions(df)
-print(test_inst.get_dataset_shape())
+agent_instance = AgentBaseFunctions(df)
